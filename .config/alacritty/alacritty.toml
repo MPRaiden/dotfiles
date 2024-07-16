@@ -10,7 +10,7 @@ family = "JetBrains Mono Nerd Font" # on linux
 style = "Regular"
 
 [window]
-opacity = 1
+opacity = 0.9 
 
 [window.padding]
 x = 10

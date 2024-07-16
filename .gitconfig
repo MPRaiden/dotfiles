@@ -1,0 +1,29 @@
+[user]
+    name = mpr
+    email = marinpericradan1@gmail.com
+
+[alias]
+st = status -sb
+ll = log --oneline
+last = log -1 HEAD --stat
+cm = commit -m
+rv = remote -v
+d = diff
+gl = config --global -l
+aa = add .
+b = branch
+pl = pull
+ps = push
+fa = fetch --all
+rb = rebase
+sh = stash
+shc = stash clear
+shl = stash list
+shp = stash pop
+br = branch
+co = checkout
+his = log --oneline --decorate --graph --parents
+[init]
+    defaultBranch = main
+
+

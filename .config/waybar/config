@@ -1,0 +1,40 @@
+{
+    // General Settings
+    "layer": "top",
+    "margin-bottom": 0,
+    "layer": "top",
+    "margin-left": 0,
+    "margin-right": 0,    
+    "spacing": 0,
+
+    // Load Modules
+    "include": [
+        "~/dotfiles-versions/backup/dotfiles/.settings/waybar-quicklinks.json",
+        "~/dotfiles-versions/backup/dotfiles/waybar/modules.json"
+    ],
+
+    // Modules Left
+    "modules-left": [
+        "custom/appmenuicon",
+        "hyprland/workspaces",
+    ],
+
+    // Modules Center
+    "modules-center": [
+        "hyprland/window",
+    ],
+
+    // Modules Right    
+    "modules-right": [
+    	"custom/updates",
+	"custom/wallpaper",
+        "pulseaudio",
+        "battery", 
+        "network",
+        "group/hardware",
+        "clock",
+	"temperature",
+	"custom/exit",
+    ]
+}
+

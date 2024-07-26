@@ -20,6 +20,6 @@ return {
     -- Apply the colorscheme. Uncomment the one you are using.
     -- vim.cmd 'colorscheme tokyonight'
     vim.cmd 'colorscheme rose-pine-moon' -- change between rose-pine alternatives here
-    vim.cmd 'highlight Normal guibg=NONE ctermbg=NONE' -- uncomment for transparency
+    -- vim.cmd 'highlight Normal guibg=NONE ctermbg=NONE' -- uncomment for transparency
   end,
 }

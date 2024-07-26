@@ -2,7 +2,6 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    event = { 'BufReadPre', 'BufNewFile' }, -- load the plugin only when opening a buffer for an already existing file or for a new one
     opts = {
       ensure_installed = {
         'bash',

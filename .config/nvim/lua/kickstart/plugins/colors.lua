@@ -1,5 +1,5 @@
 return {
-  -- 'folke/tokyonight.nvim',
+  --'folke/tokyonight.nvim',
   'rose-pine/neovim',
   priority = 1000,
   config = function()
@@ -19,7 +19,7 @@ return {
 
     -- Apply the colorscheme. Uncomment the one you are using.
     -- vim.cmd 'colorscheme tokyonight'
-    vim.cmd 'colorscheme rose-pine-moon' -- change between rose-pine alternatives here
+    vim.cmd 'colorscheme rose-pine' -- change between rose-pine alternatives here
     -- vim.cmd 'highlight Normal guibg=NONE ctermbg=NONE' -- uncomment for transparency
   end,
 }

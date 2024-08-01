@@ -1,0 +1,150 @@
+{
+	"hyprland/workspaces": {
+		"on-scroll-up": "hyprctl dispatch workspace r-1",
+		"on-scroll-down": "hyprctl dispatch workspace r+1",
+		"on-click": "activate",
+		"active-only": false,
+		"all-outputs": true,
+		"format": "{}",
+		"format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			"*": 3
+		}
+	},
+	"custom/updates": {
+		"format": "   {}",
+		"escape": true,
+		"return-type": "json",
+		"exec": "~/dotfiles/scripts/updates.sh",
+		"restart-interval": 60,
+		"on-click": "kitty --class dotfiles-floating -e ~/dotfiles/scripts/installupdates.sh"
+	},
+	"custom/wallpaper": {
+		"format": "",
+		"on-click": "waypaper",
+		"tooltip-format": "Left: Select a wallpaper"
+	},
+	"custom/waybarthemes": {
+		"format": "",
+		"on-click": "~/dotfiles/waybar/themeswitcher.sh",
+		"tooltip-format": "Select a waybar theme"
+	},
+	"custom/appmenuicon": {
+		"format": "",
+		"on-click": "rofi -show drun -replace"
+	},
+	"custom/exit": {
+		"format": "",
+		"on-click": "wlogout",
+		"tooltip-format": "Power Menu"
+	},
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	},
+	"clock": {
+		"format": "{:%H:%M %a}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}"
+	},
+	"custom/system": {
+		"format": "",
+		"tooltip": false
+	},
+	"cpu": {
+		"format": "/ C {usage}% ",
+		"on-click": "alacritty -e htop"
+	},
+	"memory": {
+		"format": "/ M {}% ",
+		"on-click": "alacritty -e htop"
+	},
+	"disk": {
+		"interval": 30,
+		"format": "D {percentage_used}% ",
+		"path": "/",
+		"on-click": "alacritty -e htop"
+	},
+	"group/hardware": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 300,
+			"children-class": "not-memory",
+			"transition-left-to-right": false
+		},
+		"modules": [
+			"custom/system",
+			"disk",
+			"cpu",
+			"memory"
+		]
+	},
+	"network": {
+		"format": "{ifname}",
+		"format-wifi": "   {signalStrength}%",
+		"format-ethernet": "  {ifname}",
+		"format-disconnected": "Disconnected",
+		"tooltip-format": " {ifname} via {gwaddri}",
+		"tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+		"tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50,
+		"on-click": "kitty --class dotfiles-floating -e nmtui"
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}   {capacity}%",
+		"format-charging": "  {capacity}%",
+		"format-plugged": "  {capacity}%",
+		"format-alt": "{icon}  {time}",
+		"format-icons": [
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
+		]
+	},
+	"pulseaudio": {
+		"format": "{icon}   {volume}%",
+		"format-bluetooth": "{volume}%  {icon} {format_source}",
+		"format-bluetooth-muted": " {icon} {format_source}",
+		"format-muted": " {format_source}",
+		"format-source": "{volume}% ",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": " ",
+			"hands-free": " ",
+			"headset": " ",
+			"phone": " ",
+			"portable": " ",
+			"car": " ",
+			"default": [
+				" ",
+				" ",
+				" "
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+	"bluetooth": {
+		"format": " {status}",
+		"format-disabled": "",
+		"format-off": "",
+		"interval": 30,
+		"on-click": "blueman-manager",
+		"format-no-controller": ""
+	},
+	"user": {
+		"format": "{user}",
+		"interval": 60,
+		"icon": false
+	}
+}

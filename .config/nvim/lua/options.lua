@@ -3,8 +3,8 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- Make cursor default from terminal setting (meaning it takes it's config from alacritty.toml file
-vim.opt.guicursor = ''
+-- Make cursor default from terminal setting (makes cursor always a block even in Insert mode)
+-- vim.opt.guicursor = ''
 
 -- Make line numbers default
 vim.opt.number = true

@@ -26,4 +26,5 @@ his = log --oneline --decorate --graph --parents
 [init]
     defaultBranch = main
 
-
+[core]
+    editor = nvim
